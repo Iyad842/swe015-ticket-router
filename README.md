@@ -33,7 +33,7 @@ python app.py
 ```
 
 Open http://127.0.0.1:7860. On the first start the trained weights are
-downloaded from the Hugging Face Hub (`https://huggingface.co/<YOUR_HF_USERNAME>/swe015-ticket-router`).
+downloaded from the Hugging Face Hub (`https://huggingface.co/IYAD842/swe015-ticket-router`).
 Instead of the environment variable you can also edit `HF_REPO_ID` in `src/config.py`.
 
 ## 2. Reproduce training and evaluation
