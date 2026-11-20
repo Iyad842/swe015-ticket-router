@@ -64,8 +64,6 @@ python slides/make_figures.py    # architecture diagram + results chart -> slide
 python slides/build_slides.py    # -> slides/SWE015_presentation.pptx (numbers read from results/results.json)
 ```
 
-Open the `.pptx`, fill in the name/ID/link placeholders, check the text, and export as PDF.
-
 ## 4. Repository layout
 
 ```
