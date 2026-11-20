@@ -1,0 +1,7 @@
+{
+  "baseline": 0.1,
+  "ffn": 0.25,
+  "teacher": 0.2,
+  "student": 0.3,
+  "student_int8": 0.25
+}

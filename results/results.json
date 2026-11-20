@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-20T09:05:49",
+  "hardware": "Intel(R) Xeon(R) CPU @ 2.00GHz, 2 logical cores, Linux 6.6.159+, Python 3.13.16, torch 2.14.1+cu130 (1 threads), CPU only, batch size 1",
+  "n_val": 3112,
+  "n_test": 5524,
+  "n_test_oos": 1000,
+  "n_test_appliance": 24,
+  "n_latency_runs": 200,
+  "models": [
+    {
+      "key": "baseline",
+      "model": "TF-IDF + Logistic Regression",
+      "precision": "FP64",
+      "accuracy": 0.8658580738595221,
+      "in_scope_accuracy": 0.9146772767462422,
+      "oos_recall": 0.645,
+      "oos_precision": 0.8704453441295547,
+      "threshold": 0.1,
+      "size_mb": 66.9,
+      "latency_ms_mean": 37.24,
+      "latency_ms_p95": 50.88
+    },
+    {
+      "key": "ffn",
+      "model": "FFN on own fastText embeddings",
+      "precision": "FP32",
+      "accuracy": 0.8387038377986966,
+      "in_scope_accuracy": 0.9005305039787799,
+      "oos_recall": 0.559,
+      "oos_precision": 0.8858954041204438,
+      "threshold": 0.25,
+      "size_mb": 40.6,
+      "latency_ms_mean": 0.47,
+      "latency_ms_p95": 1.04
+    },
+    {
+      "key": "teacher",
+      "model": "mBERT fine-tuned (teacher)",
+      "precision": "FP32",
+      "accuracy": 0.8667632150615496,
+      "in_scope_accuracy": 0.9367816091954023,
+      "oos_recall": 0.55,
+      "oos_precision": 0.9243697478991597,
+      "threshold": 0.2,
+      "size_mb": 711.9,
+      "latency_ms_mean": 107.13,
+      "latency_ms_p95": 134.67
+    },
+    {
+      "key": "student",
+      "model": "DistilmBERT distilled (student)",
+      "precision": "FP32",
+      "accuracy": 0.8805213613323678,
+      "in_scope_accuracy": 0.9332449160035367,
+      "oos_recall": 0.642,
+      "oos_precision": 0.8991596638655462,
+      "threshold": 0.3,
+      "size_mb": 541.8,
+      "latency_ms_mean": 53.46,
+      "latency_ms_p95": 64.72
+    },
+    {
+      "key": "student_int8",
+      "model": "DistilmBERT distilled + INT8 quantized",
+      "precision": "INT8 (dynamic Linear + weight-only Embedding, x86)",
+      "accuracy": 0.8801593048515568,
+      "in_scope_accuracy": 0.9204244031830239,
+      "oos_recall": 0.698,
+      "oos_precision": 0.8703241895261845,
+      "threshold": 0.25,
+      "size_mb": 136.7,
+      "latency_ms_mean": 18.18,
+      "latency_ms_p95": 27.39
+    }
+  ],
+  "subsets": {
+    "baseline": {
+      "appliance_accuracy": 0.5,
+      "turkish_accuracy": 0.9166666666666666
+    },
+    "ffn": {
+      "appliance_accuracy": 0.5,
+      "turkish_accuracy": 0.875
+    },
+    "teacher": {
+      "appliance_accuracy": 0.0,
+      "turkish_accuracy": 0.6666666666666666
+    },
+    "student": {
+      "appliance_accuracy": 0.0,
+      "turkish_accuracy": 0.6666666666666666
+    },
+    "student_int8": {
+      "appliance_accuracy": 0.0,
+      "turkish_accuracy": 0.6666666666666666
+    }
+  }
+}
