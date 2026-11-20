@@ -1,0 +1,9 @@
+# weights live on the Hugging Face Hub, not in git (R7)
+models/
+data/processed/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
