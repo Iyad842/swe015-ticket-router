@@ -24,11 +24,11 @@ regex **model-code extraction** (`DW-6534`) and error-code extraction (`E21`),
 ## 1. Run the application (single command)
 
 ```bash
-git clone https://github.com/<YOUR_GITHUB>/swe015-ticket-router.git
+git clone https://github.com/Iyad842/swe015-ticket-router.git
 cd swe015-ticket-router
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-export ROUTER_HF_REPO=<YOUR_HF_USERNAME>/swe015-ticket-router   # Windows: set ROUTER_HF_REPO=...
+export ROUTER_HF_REPO=IYAD842/swe015-ticket-router   # Windows: set ROUTER_HF_REPO=...
 python app.py
 ```
 
