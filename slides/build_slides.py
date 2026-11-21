@@ -22,11 +22,11 @@ RES = ROOT / "results"
 OUT = ROOT / "slides" / "SWE015_presentation.pptx"
 
 # ---- fill these in --------------------------------------------------------
-STUDENT_NAME = "[Your Name Surname]"
-STUDENT_ID = "[Student ID]"
-REPO_URL = "[https://github.com/<you>/swe015-ticket-router]"
-VIDEO_URL = "[https://youtu.be/<unlisted-video>]"
-HF_URL = "[https://huggingface.co/<you>/swe015-ticket-router]"
+STUDENT_NAME = "IYAD KABEL"
+STUDENT_ID = "2409115130"
+REPO_URL = "https://github.com/Iyad842/swe015-ticket-router"
+VIDEO_URL = "https://youtu.be/_Byy3nLA4wU"
+HF_URL = "https://huggingface.co/IYAD842/swe015-ticket-router"
 # Success targets stated in the introduction (set BEFORE looking at results)
 TARGET_ACC, TARGET_OOS, TARGET_MS = 0.85, 0.60, 50.0
 
