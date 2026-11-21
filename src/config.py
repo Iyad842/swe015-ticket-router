@@ -37,6 +37,6 @@ FFN_EPOCHS = 40
 FFN_LR = 0.1
 
 # ---- Hugging Face Hub repo that stores the trained weights (R7) ----------
-HF_REPO_ID = os.environ.get("ROUTER_HF_REPO", "YOUR_HF_USERNAME/swe015-ticket-router")
+HF_REPO_ID = os.environ.get("ROUTER_HF_REPO", "IYAD842/swe015-ticket-router")
 
 OOS_LABEL = "oos"
