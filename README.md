@@ -26,7 +26,8 @@ regex **model-code extraction** (`DW-6534`) and error-code extraction (`E21`),
 ```bash
 git clone https://github.com/Iyad842/swe015-ticket-router.git
 cd swe015-ticket-router
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+python -m venv .venv           # Windows: Create the .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 export ROUTER_HF_REPO=IYAD842/swe015-ticket-router   # Windows: set ROUTER_HF_REPO=...
 python app.py
